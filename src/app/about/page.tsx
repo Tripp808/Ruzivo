@@ -7,8 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+  animate: { opacity: 1, y: 0 }
 }
 
 const staggerChildren = {
@@ -32,12 +31,14 @@ export default function AboutPage() {
         >
           <motion.h1
             variants={fadeInUp}
+            transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
             About RUZIVO
           </motion.h1>
           <motion.p
             variants={fadeInUp}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
             <span className="text-2xl font-bold text-primary block mb-4 font-serif">
