@@ -10,8 +10,7 @@ import { teamMembers, categories, type TeamMember } from '@/data/team'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+  animate: { opacity: 1, y: 0 }
 }
 
 const staggerChildren = {
@@ -46,7 +45,7 @@ function PersonCard({ person }: { person: TeamMember }) {
   }
 
   return (
-    <motion.div variants={fadeInUp}>
+    <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
       <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
         <CardHeader className="text-center">
           {/* Avatar */}
@@ -65,7 +64,7 @@ function PersonCard({ person }: { person: TeamMember }) {
               />
             ) : null}
             <div className={`w-full h-full rounded-full ${getAvatarColor(person.name)} flex items-center justify-center text-white font-bold text-2xl ${person.image ? 'hidden' : ''}`}>
-              {getInitials(person.name)}
+            {getInitials(person.name)}
             </div>
           </div>
           
@@ -194,13 +193,13 @@ export default function PeoplePage() {
           className="text-center mb-12"
         >
           <motion.h1
-            variants={fadeInUp}
+            variants={fadeInUp} transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold mb-4 font-serif"
           >
             Our Team
           </motion.h1>
           <motion.p
-            variants={fadeInUp}
+            variants={fadeInUp} transition={{ duration: 0.6 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
             Meet the dedicated machine learning engineers, software engineers, and researchers behind RUZIVO. 
@@ -218,7 +217,7 @@ export default function PeoplePage() {
         >
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Search */}
-            <motion.div variants={fadeInUp} className="relative w-full lg:w-96">
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }} className="relative w-full lg:w-96">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="text"
@@ -230,7 +229,7 @@ export default function PeoplePage() {
             </motion.div>
 
             {/* Category Filter */}
-            <motion.div variants={fadeInUp} className="flex items-center gap-2">
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }} className="flex items-center gap-2">
               <Filter className="h-4 w-4 text-muted-foreground" />
               <select
                 value={selectedCategory}
@@ -262,7 +261,7 @@ export default function PeoplePage() {
           <motion.div
             initial="initial"
             animate="animate"
-            variants={fadeInUp}
+            variants={fadeInUp} transition={{ duration: 0.6 }}
             className="text-center py-12"
           >
             <p className="text-muted-foreground text-lg">
@@ -276,7 +275,7 @@ export default function PeoplePage() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          variants={fadeInUp}
+          variants={fadeInUp} transition={{ duration: 0.6 }}
           className="text-center mt-16 py-12 bg-secondary/20 rounded-lg"
         >
           <h2 className="text-2xl font-bold mb-4">Interested in Joining Us?</h2>

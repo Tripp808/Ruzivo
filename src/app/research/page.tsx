@@ -10,8 +10,7 @@ import { projects, categories, statuses, type Project } from '@/data/projects'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+  animate: { opacity: 1, y: 0 }
 }
 
 const staggerChildren = {
@@ -37,7 +36,7 @@ function ProjectCard({ project }: { project: Project }) {
   }
 
   return (
-    <motion.div variants={fadeInUp}>
+    <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
       <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
         <CardHeader>
           <div className="flex items-start justify-between mb-2">
@@ -139,13 +138,13 @@ export default function ResearchPage() {
           className="text-center mb-12"
         >
           <motion.h1
-            variants={fadeInUp}
+            variants={fadeInUp} transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold mb-4 font-serif"
           >
             Research & Publications
           </motion.h1>
           <motion.p
-            variants={fadeInUp}
+            variants={fadeInUp} transition={{ duration: 0.6 }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
             Exploring the frontiers of AI research with a focus on African languages, 
@@ -163,7 +162,7 @@ export default function ResearchPage() {
         >
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Search */}
-            <motion.div variants={fadeInUp} className="relative w-full lg:w-96">
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }} className="relative w-full lg:w-96">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="text"
@@ -175,7 +174,7 @@ export default function ResearchPage() {
             </motion.div>
 
             {/* Category and Status Filters */}
-            <motion.div variants={fadeInUp} className="flex gap-4">
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }} className="flex gap-4">
               <div className="flex items-center gap-2">
                 <Filter className="h-4 w-4 text-muted-foreground" />
                 <select
@@ -220,7 +219,7 @@ export default function ResearchPage() {
           <motion.div
             initial="initial"
             animate="animate"
-            variants={fadeInUp}
+            variants={fadeInUp} transition={{ duration: 0.6 }}
             className="text-center py-12"
           >
             <p className="text-muted-foreground text-lg">
@@ -237,7 +236,7 @@ export default function ResearchPage() {
           variants={staggerChildren}
           className="mt-20 pt-16 border-t"
         >
-          <motion.div variants={fadeInUp} className="text-center mb-16">
+          <motion.div variants={fadeInUp} transition={{ duration: 0.6 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">Publications & Papers</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Our research findings published in top-tier conferences and journals, 
@@ -247,7 +246,7 @@ export default function ResearchPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Recent Publications */}
-            <motion.div variants={fadeInUp} className="space-y-6">
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }} className="space-y-6">
               <h3 className="text-2xl font-bold font-serif">Recent Publications</h3>
               
               <div className="space-y-4">
@@ -306,7 +305,7 @@ export default function ResearchPage() {
             </motion.div>
 
             {/* Target Venues & Achievements */}
-            <motion.div variants={fadeInUp} className="space-y-6">
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }} className="space-y-6">
               <h3 className="text-2xl font-bold font-serif">Publication Strategy</h3>
               
               <div className="space-y-4">
@@ -357,25 +356,25 @@ export default function ResearchPage() {
           className="mt-16 pt-16 border-t"
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
               <div className="text-3xl font-bold text-primary mb-2">
                 {projects.filter(p => p.status === 'ongoing').length}
               </div>
               <div className="text-muted-foreground">Ongoing Projects</div>
             </motion.div>
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
               <div className="text-3xl font-bold text-primary mb-2">
                 {projects.filter(p => p.status === 'completed').length}
               </div>
               <div className="text-muted-foreground">Completed Projects</div>
             </motion.div>
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
               <div className="text-3xl font-bold text-primary mb-2">
                 8
               </div>
               <div className="text-muted-foreground">Published Papers</div>
             </motion.div>
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
               <div className="text-3xl font-bold text-primary mb-2">
                 15+
               </div>
