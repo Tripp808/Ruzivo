@@ -1,0 +1,24 @@
+# Team Profile Images
+
+This folder contains profile images for RUZIVO team members.
+
+## Instructions for Adding Images
+
+1. **Get the team member's ID** from `src/data/team.ts`
+2. **Name your image file** using the ID: `{id}.jpg` or `{id}.png`
+3. **Place the image** in this folder
+
+### Current Team Images (✅ All Uploaded):
+- `samira.jpg` - Samiratu Ntohsi ✅
+- `anesu.jpg` - Anesu Kafesu ✅
+- `isaiah.jpg` - Isaiah Essien ✅
+- `oche.jpg` - Oche D. Ankeli ✅
+- `samuel.jpg` - Samuel Babalola ✅
+
+### Image Requirements:
+- **Size**: 400x400px recommended (square aspect ratio)
+- **Format**: JPG or PNG
+- **File size**: Under 500KB for web optimization
+- **Style**: Professional headshots with clean backgrounds preferred
+
+Images will automatically appear on the team page once placed in this folder with the correct filename.
