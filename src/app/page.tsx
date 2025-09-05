@@ -6,20 +6,17 @@ import { Button } from '@/components/ui/button'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8 }
+  animate: { opacity: 1, y: 0 }
 }
 
 const fadeInLeft = {
   initial: { opacity: 0, x: -30 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8 }
+  animate: { opacity: 1, x: 0 }
 }
 
 const fadeInRight = {
   initial: { opacity: 0, x: 30 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.8 }
+  animate: { opacity: 1, x: 0 }
 }
 
 const staggerChildren = {
@@ -83,7 +80,7 @@ export default function HomePage() {
           >
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left Content */}
-              <motion.div variants={fadeInLeft} className="space-y-8">
+              <motion.div variants={fadeInLeft} transition={{ duration: 0.8 }} className="space-y-8">
                 <div className="space-y-6">
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary">
                     <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
@@ -122,7 +119,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Right Visual */}
-              <motion.div variants={fadeInRight} className="relative">
+              <motion.div variants={fadeInRight} transition={{ duration: 0.8 }} className="relative">
                 <div className="relative w-full max-w-md mx-auto">
                   {/* Central Hub */}
                   <motion.div 
@@ -244,13 +241,13 @@ export default function HomePage() {
           >
             <div className="text-center">
               <motion.h2 
-                variants={fadeInUp}
+                variants={fadeInUp} transition={{ duration: 0.8 }}
                 className="text-3xl md:text-5xl font-bold text-foreground font-serif mb-6"
               >
                 Our Research Focus Areas
               </motion.h2>
               <motion.p 
-                variants={fadeInUp}
+                variants={fadeInUp} transition={{ duration: 0.8 }}
                 className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto"
               >
                 We advance AI research across key domains with an African-first perspective, 
@@ -259,7 +256,7 @@ export default function HomePage() {
             </div>
 
             <motion.div 
-              variants={fadeInUp}
+              variants={fadeInUp} transition={{ duration: 0.8 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
               <div className="text-center p-6 bg-card/50 rounded-xl border border-border/50 hover:shadow-lg transition-shadow">
@@ -327,13 +324,13 @@ export default function HomePage() {
           >
             <div className="text-center">
               <motion.h2 
-                variants={fadeInUp}
+                variants={fadeInUp} transition={{ duration: 0.8 }}
                 className="text-3xl md:text-4xl font-bold text-foreground font-serif mb-6"
               >
                 Where We Publish & Present
               </motion.h2>
               <motion.p 
-                variants={fadeInUp}
+                variants={fadeInUp} transition={{ duration: 0.8 }}
                 className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto"
               >
                 RUZIVO researchers target the most prestigious venues in AI and ML, 
@@ -343,7 +340,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Conferences */}
-              <motion.div variants={fadeInUp} className="space-y-6">
+              <motion.div variants={fadeInUp} transition={{ duration: 0.8 }} className="space-y-6">
                 <h3 className="text-2xl font-bold text-foreground font-serif mb-6">Target Conferences</h3>
                 
                 <div className="space-y-4">
@@ -386,7 +383,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Journals */}
-              <motion.div variants={fadeInUp} className="space-y-6">
+              <motion.div variants={fadeInUp} transition={{ duration: 0.8 }} className="space-y-6">
                 <h3 className="text-2xl font-bold text-foreground font-serif mb-6">Target Journals</h3>
                 
                 <div className="space-y-4">
@@ -437,20 +434,20 @@ export default function HomePage() {
             className="max-w-4xl mx-auto text-center space-y-8"
           >
             <motion.h2 
-              variants={fadeInUp}
+              variants={fadeInUp} transition={{ duration: 0.8 }}
               className="text-3xl md:text-4xl font-bold text-foreground font-serif"
             >
               Be Part of the Movement
             </motion.h2>
             <motion.p 
-              variants={fadeInUp}
+              variants={fadeInUp} transition={{ duration: 0.8 }}
               className="text-xl text-muted-foreground leading-relaxed"
             >
               Whether you're a researcher, student, or simply passionate about Africa's technological future, 
               there are many ways to contribute to our mission of localizing AI research for the continent.
             </motion.p>
             <motion.div 
-              variants={fadeInUp}
+              variants={fadeInUp} transition={{ duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
             >
               <Button asChild size="lg" className="text-lg px-8">
