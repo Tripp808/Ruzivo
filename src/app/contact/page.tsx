@@ -10,8 +10,7 @@ import { Textarea } from '@/components/ui/textarea'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+  animate: { opacity: 1, y: 0 }
 }
 
 const staggerChildren = {
@@ -58,12 +57,14 @@ export default function ContactPage() {
         >
           <motion.h1
             variants={fadeInUp}
+            transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
             Get in Touch
           </motion.h1>
           <motion.p
             variants={fadeInUp}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
             Interested in collaborating, joining our research, or learning more about our work? 
@@ -79,7 +80,7 @@ export default function ContactPage() {
             variants={staggerChildren}
             className="lg:col-span-2"
           >
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-2xl">
@@ -193,7 +194,7 @@ export default function ContactPage() {
             className="space-y-8"
           >
             {/* Contact Information */}
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -234,7 +235,7 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Social Media */}
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
               <Card>
                 <CardHeader>
                   <CardTitle>Follow Us</CardTitle>
@@ -265,7 +266,7 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Ways to Get Involved */}
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} transition={{ duration: 0.6 }}>
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -313,6 +314,7 @@ export default function ContactPage() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={fadeInUp}
+          transition={{ duration: 0.6 }}
           className="mt-20 py-16 bg-primary/5 rounded-2xl text-center"
         >
           <div className="max-w-2xl mx-auto px-8">
